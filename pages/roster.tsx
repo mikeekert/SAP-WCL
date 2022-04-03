@@ -1,12 +1,22 @@
-import { NextPage } from 'next';
 import React from 'react';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Layout from '../components/Layout';
 
-const Roster: NextPage = () => {
+export default function Roster() {
     return (
         <div>
-
+            A roster appears here
         </div>
     );
 };
 
-export default Roster;
+Roster.getLayout = function getLayout(page: any) {
+    return (
+        <Layout>
+            <Header/>
+            {page}
+            <Footer/>
+        </Layout>
+    )
+}

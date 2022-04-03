@@ -4,15 +4,15 @@ import { ReactNode } from 'react';
 type Props = {
     children?: ReactNode
 }
-const Layout = ({children}: Props) => (
-    <div>
-        <Head>
-            <title>App here</title>
-            <meta charSet="utf-8"/>
-            <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-        </Head>
-        {children}
-    </div>
-)
-
-export default Layout
+export default function Layout({children}: Props) {
+    return (
+        <>
+            <Head>
+                <title>App here</title>
+                <meta charSet="utf-8"/>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+            </Head>
+            <main> {children} </main>
+        </>
+    )
+}
